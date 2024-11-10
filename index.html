@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Library</h1>
+
+  <div class="searchbar">
+    <label for="searchBook"></label>
+    <input type="text" id="searchBook" for="searchBook" placeholder="Title">
+    <button id="titlesearchbtn">Search</button>
+  </div>
+
+  <div class="searchbar">
+    <label for="searchAuthor"></label>
+    <input type="text" id="searchAuthor" for="searchAuthor" placeholder="Author">
+    <button id="authorsearchbtn">Search</button>
+  </div>
+
+  <div class="searchbar">
+    <label for="searchCategory"></label>
+    <select name="searchCategory" id="searchCategory">
+      <option value="">Select a category</option>
+    </select>
+    <button id="categorysearchbtn">Search</button>
+  </div>
+
+  <div class="searchbar">
+    <button onclick=dialog.showModal()>ADD NEW BOOK</button>
+  </div>
+
+  <div id="bookData">
+
+  </div>
+
+  <dialog id="dialog">
+  <form id="bookForm">
+    <label for="book">Book:</label>
+    <input type="text" id="book" name="Book" required><br>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="Author" required><br>
+
+    <label for="category">Category:</label>
+    <input type="text" id="category" name="Category" required><br>
+
+    <button type="submit" onclick=addBook()>Add Book</button>
+    <button type="submit" onclick= dialog.close()>Close</button>
+  </form>
+</dialog>
+
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

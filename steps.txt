@@ -1,0 +1,7 @@
+1. transfer files locally
+2. update them properly
+3. add/delete/edit information
+4.search bar for books/author/location
+5. drop down for categories
+5. display all data that contains the alphabets and drop down categories
+6.
