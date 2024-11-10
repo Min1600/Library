@@ -80,11 +80,17 @@ function createOption(){
 }
 
 function deleteData(match){
+  let confirmation = confirm("Are you sure you want to delete?")
   const library = JSON.parse(localStorage.getItem('Library')) || [];
+
+  if(confirmation){
   library.splice([library.indexOf(match)], 1)
   localStorage.setItem("Library", JSON.stringify(library))
 
   content.textContent = ""
+}else{
+    return
+  }
 }
 
 TitleSearchBtn.addEventListener("click", () => search(titleSearch.value, "Book"))
